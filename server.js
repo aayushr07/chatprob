@@ -16,7 +16,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3000',  // Your frontend URL
+  origin: 'https://chatpro-mu.vercel.app',  // Your frontend URL
   credentials: true,
 }));
 app.use(express.json());
@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:3000', // Your frontend URL
+    origin: 'https://chatpro-mu.vercel.app', // Your frontend URL
     methods: ['GET', 'POST'],
     credentials: true,
   },
